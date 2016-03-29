@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  blockbridge-simulator-management:
+    image: blockbridge/simulator:latest
+    container_name: bbsim-mn
+    networks:
+      - storage
+    ports:
+      - "80:80"
+      - "443:443"
+    expose:
+      - "9999"
+    ulimits:
+      msgqueue: 128000000
+    privileged: true
+    environment:
+      BB_SIM_MODE: management
+
+networks:
+  storage:
