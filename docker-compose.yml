@@ -5,10 +5,10 @@ services:
     image: blockbridge/simulator:latest
     container_name: bbsim-converged
     networks:
-      - storage
-          aliases:
-            - bbsim-mn
-            - bbsim-converged
+      storage:
+        aliases:
+          - bbsim-mn
+          - bbsim-converged
     ports:
       - "80:80"
       - "443:443"
