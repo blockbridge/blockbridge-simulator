@@ -65,9 +65,11 @@ Use a volume:
 ````
 $ docker volume create --driver blockbridge --name busy-data
 busy-data
+
 $ docker run -it -v busy-data:/data busybox sh
 / # mount | grep /data
 /dev/blockbridge/busy-data/DSK1969494C40626460 on /data type xfs (rw,seclabel,relatime,attr2,inode64,sunit=8,swidth=256,noquota)
+```
 
 #### Host attach
 
