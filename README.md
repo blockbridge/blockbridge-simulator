@@ -1,11 +1,11 @@
 # blockbridge-simulator
 Blockbridge Storage Simulator.
 
-The Blockbridge simulator runs as a docker container. It is ideal for demonstration or testing purposes as it runs anywhere Docker runs, and runs the full Blockbridge backend software stack. It is a *simulator* in that it runs as a container, by default uses loopback file-based thin devices, and is generally limited in performance.
+The Blockbridge simulator runs as a docker container. It is ideal for demonstration or testing purposes as it runs anywhere Docker runs, and runs the full Blockbridge software stack. It is a *simulator* in that it runs as a container, by default uses loopback file-based thin devices, and is generally limited in performance.
 
-The Blockbridge stack is split into a control plane and data plane "nodes". A management node is required for management, and a storage node is required for data access.
+The Blockbridge stack is split into control plane and data plane "nodes". A management node is required for management, and a storage node is required for data access.
 
-The simulator runs as a `converged` (combined management and storage node) by default, but can also run as a separate solo `management` or solo `storage` node, for multi-host or multi-site configurations.
+The simulator runs as a `converged` node (combined management and storage) by default, but can also run as a separate solo `management` or solo `storage` node for multi-host or multi-site configurations.
 
 Docker compose files are available for each of the simulator node types.
 
@@ -24,7 +24,7 @@ Example: `https://192.168.99.100`
 
 ### Management CLI
 
-Use the [Blockbridge Command Line Tools](http://www.blockbridge.com/the-blockbridge-command-line-tools/) for management via the command line. The CLI is available for both linux and windows.
+Use the [Blockbridge Command Line Tools](http://www.blockbridge.com/the-blockbridge-command-line-tools/) for management via the command line. The CLI is available for both Linux and Windows.
 
 ````
 $ bb auth login
@@ -53,13 +53,21 @@ Authenticated; token expires in 3599 seconds.
 
 #### Volume driver for Docker
 
-The [Blockbridge volume driver for Docker](https://github.com/blockbridge/blockbridge-docker-volume) enables Docker volumes to be backed by Blockbridge storage. The volume driver works directly with the Blockbridge simulator.
+The [Blockbridge volume driver for Docker](https://github.com/blockbridge/blockbridge-docker-volume) enables Docker volumes to be backed by Blockbridge storage. The volume driver works directly with the Blockbridge simulator (or any Blockbridge management node).
 
 Create a volume through Docker:
 
 ````
 docker volume create --driver blockbridge
 ````
+
+Use a volume:
+````
+$ docker volume create --driver blockbridge --name busy-data
+busy-data
+$ docker run -it -v busy-data:/data busybox sh
+/ # mount | grep /data
+/dev/blockbridge/busy-data/DSK1969494C40626460 on /data type xfs (rw,seclabel,relatime,attr2,inode64,sunit=8,swidth=256,noquota)
 
 #### Host attach
 
