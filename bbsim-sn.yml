@@ -5,7 +5,7 @@ services:
     image: blockbridge/simulator:latest
     container_name: bbsim-sn
     networks:
-      - storage
+      - discovery
     ulimits:
       msgqueue: 128000000
     privileged: true
@@ -14,4 +14,4 @@ services:
       BB_SIM_MODE: storage
 
 networks:
-  storage:
+  discovery:

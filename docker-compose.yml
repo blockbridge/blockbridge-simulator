@@ -5,7 +5,7 @@ services:
     image: blockbridge/simulator:latest
     container_name: bbsim-converged
     networks:
-      storage:
+      discovery:
         aliases:
           - bbsim-mn
           - bbsim-converged
@@ -19,4 +19,4 @@ services:
     privileged: true
 
 networks:
-  storage:
+  discovery:
