@@ -1,7 +1,7 @@
 # blockbridge-simulator
 Blockbridge Storage Simulator.
 
-The Blockbridge simulator is a full version of the Blockbridge storage stack. It is considered a *simulator* because it runs as a Docker container, uses loopback file-based thin devices by default, and is generally limited in performance. It is ideal for demonstration or testing purposes as it runs anywhere Docker runs, including Docker for Mac and Docker Toolbox.
+The Blockbridge simulator is a full version of the Blockbridge storage stack. It is considered a *simulator* because it runs as a Docker container, uses loopback file-based thin devices by default, and is generally limited in performance. It is ideal for demonstration or testing purposes as it runs anywhere Docker runs, including Docker Toolbox.
 
 The Blockbridge stack is split into control plane and data plane "nodes". A management node is required for management, and a storage node is required for data access.
 
