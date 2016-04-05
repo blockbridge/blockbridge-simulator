@@ -16,6 +16,20 @@ $ docker-compose up
 
 This runs a converged node.
 
+### Swarm Quick Start
+Running the simulator in a swarm setup requires additional pieces of information: the swarm node constraint to run the simulator on, and the external IP address of the simulator container. This information is passed to the compose file in environment variables.
+
+The required fields are:
+````
+BB_SIM_NODE
+BB_SIM_IP
+````
+
+If using docker machine, this is easily queried. For example, to run the Blockbridge simulator on the swarm master node:
+````
+BB_SIM_NODE=swarm-master BB_SIM_IP=$(docker-machine ip $BB_SIM_NODE) docker-compose -f docker-compose-swarm.yml up
+````
+
 ### Management UI
 
 Access the management UI via web browser pointing to the local host running the simulator. For docker-machine this address is accessible through `docker-machine ip`.
