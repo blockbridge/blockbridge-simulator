@@ -1,11 +1,11 @@
 # blockbridge-simulator
 Blockbridge Storage Simulator.
 
-The Blockbridge simulator is a full version of the Blockbridge storage stack. It is considered a *simulator* because it runs as a Docker container, uses loopback file-based thin devices by default, and is generally limited in performance. It is ideal for demonstration or testing purposes as it runs anywhere Docker runs, including Docker Toolbox.
+The Blockbridge simulator is a full version of the Blockbridge storage stack. It is considered a *simulator* because it runs as a Docker container, uses loopback file-based thin devices by default, and is generally limited in performance and security. It is ideal for demonstration or testing purposes as it runs anywhere Docker runs, including Docker Toolbox.
 
 The Blockbridge stack is split into control plane and data plane "nodes". A management node is required for management, and a storage node is required for data access.
 
-The simulator runs as a `converged` node (combined management and storage) by default, but can also run as a separate solo `management` or solo `storage` node for multi-host or multi-site configurations.
+The simulator runs as a `converged` node (combined management and storage) by default, but can also run as a separate `management` or `storage` node for multi-host or multi-site configurations.
 
 Docker compose files are available for each of the simulator node types.
 
@@ -17,7 +17,7 @@ $ docker-compose up
 This runs a converged node.
 
 ### Swarm Quick Start
-Running the simulator in a swarm setup requires additional pieces of information: the swarm node constraint to run the simulator on, and the external IP address of the simulator container. This information is passed to the compose file in environment variables.
+Running the simulator in a swarm setup requires additional pieces of information: the swarm node constraint to run the simulator on, and the external IP address of that node. This information is passed to the compose file in environment variables.
 
 The required fields are:
 ````
@@ -25,7 +25,7 @@ BB_SIM_NODE
 BB_SIM_IP
 ````
 
-If using docker machine, this is easily queried. For example, to run the Blockbridge simulator on the swarm master node:
+If using docker machine, this is easily queried. For example, to run the Blockbridge simulator on the `swarm-master` node:
 ````
 BB_SIM_NODE=swarm-master BB_SIM_IP=$(docker-machine ip $BB_SIM_NODE) docker-compose -f docker-compose-swarm.yml up
 ````
