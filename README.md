@@ -124,7 +124,7 @@ management with APIs and tools that are powerful and simple to use.
 
 For more information, please see:
 * [Blockbridge](https://blockbridge.com)
-* [Blog](https://blockbridge.com/blog)
+* [Blockbridge Blog](https://blockbridge.com/blog)
 * [Blockbridge volume driver for Docker](https://github.com/blockbridge/blockbridge-docker-volume)
 
 ### Not For Production Use
