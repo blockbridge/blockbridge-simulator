@@ -76,4 +76,4 @@ echo
 echo "---- ---------------- -----"
 echo "---- Ready to deploy  -----"
 echo "---- ---------------- -----"
-echo "Run: eval \$\(docker-machine env --swarm $NAME-swarm-master\)"
+echo "Run: eval \$(docker-machine env --swarm $NAME-swarm-master)"
