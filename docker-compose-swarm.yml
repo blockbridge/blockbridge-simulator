@@ -2,7 +2,7 @@ version: '2'
 
 services:
   blockbridge-simulator-converged:
-    image: blockbridge/simulator:swarm
+    image: blockbridge/simulator:latest
     container_name: bbsim-converged
     networks:
       discovery:
