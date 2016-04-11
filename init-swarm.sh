@@ -52,6 +52,7 @@ docker-machine create -d $DRIVER $NAME-mh-keystore
 echo "----- Start consul -----"
 docker $(docker-machine config $NAME-mh-keystore) run -d -p "8500:8500" --name="consul" -h "consul" progrium/consul -server -bootstrap
 
+# Swarm Master
 echo "----- Create machine for the swarm master -----"
 docker-machine create -d $DRIVER --swarm --swarm-master \
     --swarm-discovery="consul://$(docker-machine ip $NAME-mh-keystore):8500" \
@@ -59,7 +60,8 @@ docker-machine create -d $DRIVER --swarm --swarm-master \
     --engine-opt="cluster-advertise=eth0:2376" \
     $NAME-swarm-master
 
-for node in {01..03}
+# Swarm nodes
+for node in {01..02}
 do
     echo "----- Create machine for swarm node $node -----"
     docker-machine create -d $DRIVER --swarm \
