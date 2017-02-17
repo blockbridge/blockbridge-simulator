@@ -50,7 +50,7 @@ Login as `system` or `block` using the appropriate credentials.
 
 ### Management CLI
 
-Use the [Blockbridge Command Line Tools (See 'Use The Tools')](http://www.blockbridge.com/trial/) for management via the command line. The CLI is available for both Linux and Windows.
+Use the [Blockbridge Command Line Tools (See 'Use The Tools')](http://www.blockbridge.com/trial/) for management via the command line. The CLI is available for both Linux and Windows. After installing the CLI, you can login via command line.
 
 ````
 $ bb auth login
