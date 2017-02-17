@@ -166,7 +166,7 @@ For more information, please see:
 * [Blockbridge](https://blockbridge.com)
 * [Blockbridge Blog](https://blockbridge.com/blog)
 * [Blockbridge Trial Download](https://blockbridge.com/trial)
-* [Blockbridge volume driver for Docker](https://github.com/blockbridge/blockbridge-docker-volume)
+* [Blockbridge Volume Plugin for Docker](https://github.com/blockbridge/blockbridge-docker-volume)
 
 ### Not For Production Use
 
