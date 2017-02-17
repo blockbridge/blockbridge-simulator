@@ -115,7 +115,6 @@ Use this API Key in scripts or automated tests.
 
 ````
 $ BLOCKBRIDGE_API_KEY="1/zE6a6hePWzXFBr8GMUsYGPiHt7cT4jfAfAmzaOC0gNr8TprqF49adA" bb auth info
-BLOCKBRIDGE_API_KEY="1/zE6a6hePWzXFBr8GMUsYGPiHt7cT4jfAfAmzaOC0gNr8TprqF49adA" bb auth info
 == Authorization: ATH4769B94C40626460
 type                  access token             
 user                  block                    
