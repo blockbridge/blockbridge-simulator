@@ -4,6 +4,8 @@ services:
   blockbridge-simulator-converged:
     image: blockbridge/simulator:latest
     container_name: bbsim-converged
+    volumes:
+      - bb-data:/bb/data
     networks:
       discovery:
         aliases:
@@ -19,5 +21,7 @@ services:
       msgqueue: 128000000
     privileged: true
 
+volumes:
+  bb-data:
 networks:
   discovery:
