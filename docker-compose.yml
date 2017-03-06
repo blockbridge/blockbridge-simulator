@@ -5,7 +5,7 @@ services:
     image: ${REGISTRY}blockbridge/simulator:latest
     container_name: bbsim-converged
     volumes:
-      - bb-data:/bb/data
+      - bb_data:/bb/data
     ports:
       - "80:80"
       - "443:443"
@@ -15,4 +15,4 @@ services:
     privileged: true
 
 volumes:
-  bb-data:
+  bb_data:
