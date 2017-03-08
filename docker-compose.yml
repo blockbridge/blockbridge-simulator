@@ -13,5 +13,6 @@ services:
     ulimits:
       msgqueue: 128000000
     privileged: true
+    restart: always
 volumes:
   bb_data:
