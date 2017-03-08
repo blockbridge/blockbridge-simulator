@@ -4,6 +4,7 @@ services:
   blockbridge-simulator-converged:
     image: ${REGISTRY}blockbridge/simulator:latest
     container_name: bbsim-converged
+    network_mode: "host"
     volumes:
       - bb_data:/bb/data
     ports:
@@ -13,6 +14,5 @@ services:
     ulimits:
       msgqueue: 128000000
     privileged: true
-
 volumes:
   bb_data:
