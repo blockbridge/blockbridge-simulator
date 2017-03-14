@@ -150,6 +150,9 @@ Use the volume
 ````
 docker run --rm -it -v testvol:/data alpine sh
 /# df -k /data
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/blockbridge/testvol/DSK1969C94C40626470
+                       1046496     33104   1013392   3% /data
 ````
 
 For more information on the Blockbridge Docker volume plugin see:
