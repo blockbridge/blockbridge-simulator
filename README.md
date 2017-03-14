@@ -7,8 +7,6 @@ The Blockbridge stack is split into control plane and data plane "nodes". A mana
 
 The container runs as a `converged` node (combined management and storage) by default, but can also run as a separate `management` or `storage` node for multi-host or multi-site configurations.
 
-Docker compose files are available for each of the node types.
-
 ### Quick Start
 * Install Docker
 ````
@@ -182,7 +180,8 @@ Blockbridge is a comprehensive storage software product. It enables tenant isola
 For more information, please see:
 * [Blockbridge](https://blockbridge.com)
 * [Blockbridge Blog](https://blockbridge.com/blog)
-* [Blockbridge Trial Download](https://blockbridge.com/trial)
+* [Blockbridge Install](https://blockbridge.com/container/)
+* [Blockbridge Tools](https://blockbridge.com/tools/)
 * [Blockbridge Volume Plugin for Docker](https://github.com/blockbridge/blockbridge-docker-volume)
 
 ### Not For Production Use
