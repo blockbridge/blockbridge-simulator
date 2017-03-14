@@ -30,6 +30,22 @@ The quick start installation by default uses port 80/443 for web management and 
 
 The container will generate access credentials for the `system` administrator user, and a default tenant user `default`. API tokens are also generated for use with the Docker volume plugin and command line tools.
 
+````
+=================================================================================
+Blockbridge Storage Container 3.1.0-3893.3 (3c4ec416-43bc-44aa-bec2-4b6c2309ca08)
+Mode: converged
+
+Generated Credentials (may not reflect current system state)
+
+System admin API token:  1/a0tx78VuTRg39rPzc05K9bzUXoyPp9ZufCifBCjixVh7S3HvxW5MWQ
+System admin username:   system
+System admin passpass:   88d6312ea0c6c5329962a631645e53b9
+Default user username:   default
+Default user password:   f994e588c02d5610a300ad255aa60042
+Volume plugin API token: 1/fpTVWfSwPaKqE18UIcRQP/ZLbfAJXWQjr9f0520depRelNVZ9LA84w
+=================================================================================
+````
+
 ### Management UI
 
 Access the management UI via web browser pointing to the local host running the container. For docker-machine this address is accessible through `docker-machine ip`.
