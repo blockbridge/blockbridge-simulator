@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   blockbridge-simulator-converged:
-    image: ${REGISTRY}blockbridge/simulator:latest
+    image: ${REGISTRY}blockbridge/simulator:4
     container_name: bbsim-converged
     volumes:
       - bb_data:/bb/data
